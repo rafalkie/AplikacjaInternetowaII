@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact',function(){
-	return 'To jest strona kontak';
-});
+Route::get('/contact','PagesController@contact');
+Route::get('/about','PagesController@about');
