@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/custom.css')}}" rel="stylesheet">
 
     <style>
         body {
@@ -49,8 +49,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="">Start</a></li>
                     <li><a href="articles.html">Filmy</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="about.html">O nas</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/about">O nas</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
