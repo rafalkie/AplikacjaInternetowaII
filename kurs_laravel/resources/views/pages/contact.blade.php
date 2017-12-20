@@ -1,4 +1,7 @@
 @extends('master')
 @section('content')
-<h2>To jest strona Kontakt</h2>
+
+<h2>{{$header}}</h2>
+<h2>{{$date}}</h2>
+<h2>{{$visited}}</h2>
 @stop
