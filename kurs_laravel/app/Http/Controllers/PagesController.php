@@ -8,11 +8,11 @@ class PagesController extends Controller
 {
     public function contact(){
 
-    	return 'To jest strona kontakt';
+    	return view('pages.contact');
     }
 
     public function about(){
 
-    	return 'To jest strona o Nas';
+    		return view('pages.about');
     }
 }
