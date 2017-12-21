@@ -16,9 +16,10 @@ class VideosController extends Controller
     }
 
     ///metoda która wyciąga jeden film
-    public function show(){
+    public function show($id){
 
-    	$videos= Video::latest()->get();
-    	return view('videos.index')->with('videos',$videos);
+    	
+    	$video= Video::findOrFail($id);
+    	return view('videos.show')->with('video',$video);
     }
 }
