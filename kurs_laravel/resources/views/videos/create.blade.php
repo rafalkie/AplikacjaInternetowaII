@@ -6,9 +6,21 @@
         <div class="card">
             <div class="panel-body">
             <!-- Formularz -->
-            	
+            @if(count($errors)>0)
+            	<div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{$error}} </li>
+                        @endforeach
+
+                    </ul>
+
+                </div>
+            @endif
 					{!! Form::open(['url'=>'videos','class'=>'form-horizontal']) !!}
             		
+
+
             		<div class="form-group">
                         <div class="col-md-4 control-label">
                         	{!!Form::label('title','Tytuł:')!!}
