@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Request; // rządanie
 
 use App\Video;
+use App\Http\Requests\CreateVideoRequest;
 
 class VideosController extends Controller
 {
@@ -31,10 +32,11 @@ class VideosController extends Controller
 
     ////metoda zapisujaca film do bazy
 
-    public function store(){
+    public function store(CreateVideoRequest $request){
 
-		$input= Request::all();
-		Video::create($input);
+		Video::create($request->all());
+
+
 		return redirect('videos');//przekierowanie
 
     
