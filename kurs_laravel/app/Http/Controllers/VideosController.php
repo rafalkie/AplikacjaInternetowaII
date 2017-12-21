@@ -41,4 +41,24 @@ class VideosController extends Controller
 
     
     }
+
+    	/////formularz edycji video
+    public function edit($id)
+    {
+
+			$video = Video::findOrFail($id);
+			return view('videos.edit')->with('video',$video);	
+
+    
+    }
+    	/// aktualizacja filmu
+      public function update($id, CreateVideoRequest $request)
+    {
+
+			$video = Video::findOrFail($id);
+			$video ->update($request->all());
+			return redirect('videos');	
+
+    
+    }
 }
