@@ -24,7 +24,7 @@
 	                </a>
 	                <p>{{ $video->description}}</p>
 	                <span class="upper-label">Dodał</span>
-	                <span class="video-author">Strefa Kursów</span>
+	                <span class="video-author">{{ $video->user->name }}</span>
 	            </div>
 	            
 	        </div>

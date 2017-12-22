@@ -9,6 +9,17 @@ class Video extends Model
     protected $fillable = [
     	'title',
     	'url',
-    	'description'
+    	'description',
+    	'user_id'
     ];
+
+///Film ma swojego autora
+
+
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
+
+
 }
