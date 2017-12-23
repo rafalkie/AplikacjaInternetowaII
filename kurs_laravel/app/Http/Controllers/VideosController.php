@@ -66,7 +66,9 @@ class VideosController extends Controller
     {
 
 			$video = Video::findOrFail($id);
-			return view('videos.edit')->with('video',$video);	
+             $categories = Category::pluck('name','id');
+			// return view('videos.edit')->with('video',$video)->with('categories',$categories);	
+               return view('videos.edit',compact('video','categories'));   
 
     
     }
@@ -76,6 +78,7 @@ class VideosController extends Controller
 
 			$video = Video::findOrFail($id);
 			$video ->update($request->all());
+            $video ->categories()->sync($request->input('CategoryList'));
 			return redirect('videos');	
 
     
