@@ -7,12 +7,14 @@
             <div class="panel-body">
             <!-- Formularz -->
 
-                    @include('videos.form_errors')
-					{!! Form::open(['url'=>'videos','class'=>'form-horizontal']) !!}
+           			 @include('videos.form_errors')
+
+					{!! Form::model($video,['method'=>'PATCH','class'=>'form-horizontal',
+					'action'=> ['VideosController@update', $video -> id ]]) !!}
             		
-                    
-                    @include('videos.form',['buttonText'=>'Dodaj wideo'])
-            
+
+
+            		 @include('videos.form',['buttonText'=>'Zaktualizuj'])
 
 					{!! Form::close()!!}
             

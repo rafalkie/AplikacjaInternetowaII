@@ -10,5 +10,16 @@ class Video extends Model
     	'title',
     	'url',
     	'description'
+    	
     ];
+
+///Film ma swojego autora
+
+
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
+
+
 }

@@ -7,6 +7,14 @@
 <div class="videos-header card">
     <h2>Najnowsze filmy</h2>
 </div>
+
+@if (Session::has('video_created'))
+	<div class="alert alert-success card">
+	{{Session::get('video_created')}}
+
+	</div>
+@endif
+
 <div class="row">
 
 	@foreach($videos as $video)
@@ -24,7 +32,7 @@
 	                </a>
 	                <p>{{ $video->description}}</p>
 	                <span class="upper-label">Dodał</span>
-	                <span class="video-author">Strefa Kursów</span>
+	                <span class="video-author">{{ $video->user->name }}</span>
 	            </div>
 	            
 	        </div>
