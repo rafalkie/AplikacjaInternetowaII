@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Request; // rządanie
 
 use App\Video;
+
 use App\Http\Requests\CreateVideoRequest;
 use Auth;
 use Session;
+use App\Category;
 
 class VideosController extends Controller
 {
@@ -37,15 +39,22 @@ class VideosController extends Controller
     ///wyswietla formularz dodawania filmu
 
     public function create(){
-    	return view('videos/create');
+        $categories = Category::pluck('name','id');
+    	return view('videos/create')->with('categories',$categories);
     }
 
     ////metoda zapisujaca film do bazy
 
     public function store(CreateVideoRequest $request){
 
+
+
+
 		 $video = new Video($request->all());
         Auth::user()->videos()->save($video);
+
+        $categoriesIds= $request->input('CategoryList');
+        $video->categories()->attach( $categoriesIds);
         Session::flash('video_created','Twój film został dodany');
 		return redirect('videos');//przekierowanie
 
@@ -57,7 +66,9 @@ class VideosController extends Controller
     {
 
 			$video = Video::findOrFail($id);
-			return view('videos.edit')->with('video',$video);	
+             $categories = Category::pluck('name','id');
+			// return view('videos.edit')->with('video',$video)->with('categories',$categories);	
+               return view('videos.edit',compact('video','categories'));   
 
     
     }
@@ -67,6 +78,7 @@ class VideosController extends Controller
 
 			$video = Video::findOrFail($id);
 			$video ->update($request->all());
+            $video ->categories()->sync($request->input('CategoryList'));
 			return redirect('videos');	
 
     

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -22,7 +21,6 @@ class CreateVideosTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-
         });
     }
 
@@ -33,6 +31,6 @@ class CreateVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::drop('videos');
     }
 }
