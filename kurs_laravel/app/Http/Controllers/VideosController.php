@@ -47,8 +47,14 @@ class VideosController extends Controller
 
     public function store(CreateVideoRequest $request){
 
+
+
+
 		 $video = new Video($request->all());
         Auth::user()->videos()->save($video);
+
+        $categoriesIds= $request->input('CategoryList');
+        $video->categories()->attach( $categoriesIds);
         Session::flash('video_created','Twój film został dodany');
 		return redirect('videos');//przekierowanie
 

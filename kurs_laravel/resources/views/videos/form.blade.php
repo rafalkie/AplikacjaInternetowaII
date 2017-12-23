@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="col-md-6">
-                           {!!Form::select('CategoryList', $categories ,null,['class'=>'form-control','multiple'])!!}
+                           {!!Form::select('CategoryList[]', $categories ,null,['class'=>'form-control','multiple'])!!}
                         </div>
                     </div>
 
