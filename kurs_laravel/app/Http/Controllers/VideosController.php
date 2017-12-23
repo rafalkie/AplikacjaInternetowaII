@@ -1,16 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Request; // rządanie
 
 use App\Video;
 use App\Http\Requests\CreateVideoRequest;
+use Auth;
+use Session;
 
 class VideosController extends Controller
 {
+
+     public function __construct(){
+
+           $this->middleware('auth',['only'=>'create']);
+    }
+
     //pobieramy listę filmów
 
     public function index(){
+
 
     	$videos= Video::latest()->get();
     	return view('videos.index')->with('videos',$videos);
@@ -34,9 +44,9 @@ class VideosController extends Controller
 
     public function store(CreateVideoRequest $request){
 
-		Video::create($request->all());
-
-
+		 $video = new Video($request->all());
+        Auth::user()->videos()->save($video);
+        Session::flash('video_created','Twój film został dodany');
 		return redirect('videos');//przekierowanie
 
     

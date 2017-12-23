@@ -9,8 +9,8 @@ class Video extends Model
     protected $fillable = [
     	'title',
     	'url',
-    	'description',
-    	'user_id'
+    	'description'
+    	
     ];
 
 ///Film ma swojego autora
