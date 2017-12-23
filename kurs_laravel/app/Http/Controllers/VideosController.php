@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Request; // rządanie
 
 use App\Video;
+
 use App\Http\Requests\CreateVideoRequest;
 use Auth;
 use Session;
+use App\Category;
 
 class VideosController extends Controller
 {
@@ -37,7 +39,8 @@ class VideosController extends Controller
     ///wyswietla formularz dodawania filmu
 
     public function create(){
-    	return view('videos/create');
+        $categories = Category::pluck('name','id');
+    	return view('videos/create')->with('categories',$categories);
     }
 
     ////metoda zapisujaca film do bazy
