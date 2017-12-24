@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-
+@section('title', 'Filmy-edytuj')
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="card">

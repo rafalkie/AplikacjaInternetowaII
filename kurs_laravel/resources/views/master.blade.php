@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Artykuły</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -39,16 +39,15 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="#">
-                    SK - Laravel
+                <a class="navbar-brand" href="/">
+                    FreeFilms
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/videos">Start</a></li>
-                    <li><a href="/videos">Filmy</a></li>
+                    <li><a href="/">Start</a></li>
                     <li><a href="/contact">Kontakt</a></li>
                     <li><a href="/about">O nas</a></li>
                 </ul>
@@ -79,7 +78,7 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; Strefa Kursów 2016</p>
+            <p>&copy; FreeFilms 2018 </p>
         </div>
     </footer>
 

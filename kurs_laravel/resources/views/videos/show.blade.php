@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+@section('title', 'Film')
 <div class="col-xs-12 videos-header card">
     <h2>{{ $video->title}}</h2>
 </div>

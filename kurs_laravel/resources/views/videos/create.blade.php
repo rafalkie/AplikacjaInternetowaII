@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+@section('title', 'Filmy-dodaj')
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
