@@ -16,7 +16,8 @@ class VideosController extends Controller
 
      public function __construct(){
 
-           $this->middleware('auth',['only'=>'create']);
+
+           $this->middleware('auth',['only'=>['edit','create']]);
     }
 
     //pobieramy listę filmów

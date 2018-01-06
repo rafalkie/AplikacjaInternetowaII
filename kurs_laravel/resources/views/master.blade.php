@@ -39,8 +39,8 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="#">
-                    SK - Laravel
+                <a class="navbar-brand" href="/">
+                    Free - Films
                 </a>
             </div>
 
@@ -56,8 +56,10 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="login">Zaloguj</a></li>
+                        <li><a href="/videos/create">Dodaj Film</a></li>
+                        <li><a href="/login">Zaloguj</a></li>
                         <li><a href="register">Rejestracja</a></li>
+
                 </ul>
             </div>
         </div>
@@ -68,6 +70,8 @@
 
         <!-- .container -->
         <div class="container site-content">
+            
+           
 
             @yield('content')
             
@@ -79,7 +83,7 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; Strefa Kursów 2016</p>
+            <p>&copy; Free -Films 2017-2018 . Author Rafał Kieroński , Jakub Kuśnierz.</p>
         </div>
     </footer>
 
