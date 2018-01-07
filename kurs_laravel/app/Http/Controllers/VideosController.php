@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Request; // rządanie
 
 use App\Video;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests\CreateVideoRequest;
 use Auth;
@@ -20,21 +21,28 @@ class VideosController extends Controller
            $this->middleware('auth',['only'=>['edit','create']]);
     }
 
+ 
     //pobieramy listę filmów
 
     public function index(){
 
 
     	$videos= Video::latest()->get();
+
     	return view('videos.index')->with('videos',$videos);
     }
+
 
     ///metoda która wyciąga jeden film
     public function show($id){
 
+        ///wyciaganie liczby filmów
+        // $lFilmow=DB::table('videos')->limit(1)->latest()->pluck('id');
+         $lFilmows=Video::latest()->limit(1)->get();
+         
     	
     	$video= Video::findOrFail($id);
-    	return view('videos.show')->with('video',$video);
+    	return view('videos.show',compact('video','d','lFilmows'));
     }
 
     ///wyswietla formularz dodawania filmu
@@ -84,4 +92,6 @@ class VideosController extends Controller
 
     
     }
+
+ 
 }

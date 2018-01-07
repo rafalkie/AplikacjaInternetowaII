@@ -83,7 +83,8 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; Free -Films 2017-2018 . Author Rafał Kieroński , Jakub Kuśnierz.</p>
+            <p>&copy; Free-Films-2018 ; Autorzy: Rafał Kieroński i Jakub Kuśnierz</p>
+     
         </div>
     </footer>
 

@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+
 <div class="col-xs-12 videos-header card">
     <h2>{{ $video->title}}</h2>
 </div>
@@ -61,7 +62,7 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         <h5>Webdesign</h5>
-                        <span>234 filmów</span>
+                        <span>33 filmów</span>
                     </li>
                     <li class="list-group-item">
                         <h5>JavaScript</h5>
@@ -81,7 +82,17 @@
                 <h4>Statystyki</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge">1342</span>Filmów
+
+                        <span class="badge"> 
+                            
+                        @foreach($lFilmows as $lFilmow)
+                        {{$lFilmow-> id}}     
+                        @endforeach
+                        
+                    
+                        </span>Filmów
+              
+                        
                     </li>
                     <li class="list-group-item">
                         <span class="badge">18</span>Kategorii
@@ -89,9 +100,7 @@
                     <li class="list-group-item">
                         <span class="badge">7800</span>Użytkowników
                     </li>
-                    <li class="list-group-item">
-                        <span class="badge">832</span>Komentarzy
-                    </li>
+                    
                 </ul>                            
             </div>
         </div>
