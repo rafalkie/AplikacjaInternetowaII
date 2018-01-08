@@ -10,6 +10,7 @@ class PagesController extends Controller
     	$header='To jest nagłówek strony kontakt';
     	$date='20/02/2017';
     	$visited=3450;
+
     	return view('pages.contact',compact('header','date','visited'));
     }
 
@@ -17,4 +18,5 @@ class PagesController extends Controller
 
     		return view('pages.about');
     }
+   
 }

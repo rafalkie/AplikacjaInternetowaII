@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Artykuły</title>
+    <title>Free-Films</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
 
@@ -39,9 +39,13 @@
                 </button>
 
                 <!-- Branding Image -->
+                
                 <a class="navbar-brand" href="#">
-                    SK - Laravel
+                <span><img src="{{ URL::asset('/img/logo.png')}}" width="30" height="30"/></span>
+                Free-Films
                 </a>
+   
+             
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -49,15 +53,18 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/videos">Start</a></li>
                     <li><a href="/videos">Filmy</a></li>
-                    <li><a href="/contact">Kontakt</a></li>
                     <li><a href="/about">O nas</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="login">Zaloguj</a></li>
+                        <li><a href="/videos/create">Dodaj Film</a></li>
+                        <li><a href="/login">Zaloguj</a></li>
                         <li><a href="register">Rejestracja</a></li>
+
                 </ul>
             </div>
         </div>
@@ -68,6 +75,8 @@
 
         <!-- .container -->
         <div class="container site-content">
+            
+           
 
             @yield('content')
             
@@ -77,9 +86,10 @@
     
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; Strefa Kursów 2016</p>
+    <footer class="site-footer panel-success ">
+        <div class="container" style="text-align:center; ">
+            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 </p>
+     
         </div>
     </footer>
 

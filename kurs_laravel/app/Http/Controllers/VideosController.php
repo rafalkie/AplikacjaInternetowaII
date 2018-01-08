@@ -5,35 +5,49 @@ namespace App\Http\Controllers;
 use Request; // rządanie
 
 use App\Video;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests\CreateVideoRequest;
 use Auth;
 use Session;
 use App\Category;
+use App\User;
 
 class VideosController extends Controller
 {
 
      public function __construct(){
 
-           $this->middleware('auth',['only'=>'create']);
+
+           $this->middleware('auth',['only'=>['edit','create']]);
     }
 
+ 
     //pobieramy listę filmów
 
     public function index(){
 
 
     	$videos= Video::latest()->get();
+
     	return view('videos.index')->with('videos',$videos);
     }
+
 
     ///metoda która wyciąga jeden film
     public function show($id){
 
+        ///wyciaganie liczby filmów
+        // $lFilmow=DB::table('category_video')->limit(1)->latest()->get();
+         $lFilmows=Video::latest()->limit(1)->get();
+         $lCategorys=DB::table('categories')->limit(1) ->orderBy('id', 'desc')->get();
+         $Categorys=DB::table('categories')->get();
+         $lUsers=User::latest()->limit(1)->get();
+         
+         
     	
     	$video= Video::findOrFail($id);
-    	return view('videos.show')->with('video',$video);
+    	return view('videos.show',compact('video','lFilmows','lCategorys','lUsers','Categorys'));
     }
 
     ///wyswietla formularz dodawania filmu
@@ -83,4 +97,6 @@ class VideosController extends Controller
 
     
     }
+
+ 
 }

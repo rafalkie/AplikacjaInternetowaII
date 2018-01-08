@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+
 <div class="col-xs-12 videos-header card">
     <h2>{{ $video->title}}</h2>
 </div>
@@ -24,9 +25,9 @@
                  </div>
 
                 <h4>Pełny opis</h4>
-                <p>{{ $video->discription}}</p>
+                <p>{{ $video->description}}</p>
                 <span class="upper-label">Dodał</span>
-                <span class="video-author">Strefa Kursów</span>
+                <span class="video-author">{{ $video->user->name }}</span>
                 <div class="edit-button">
                     <a href="{{action('VideosController@edit',$video->id)}}" class="btn btn-primary btn-lg">
                         Edytuj Video
@@ -59,18 +60,14 @@
             <div class="right-col-box categories-box">
                 <h4>Popularne kategorie</h4>
                 <ul class="list-group">
+                       @foreach($Categorys as $Category)
+                         
                     <li class="list-group-item">
-                        <h5>Webdesign</h5>
-                        <span>234 filmów</span>
+                        <h5> {{$Category-> name}}   </h5>
+                 
                     </li>
-                    <li class="list-group-item">
-                        <h5>JavaScript</h5>
-                        <span>87 filmów</span>
-                    </li>
-                    <li class="list-group-item">
-                        <h5>Laravel</h5>
-                        <span>56 filmów</span>
-                    </li>
+                      
+                            @endforeach
                 </ul>
             </div>
         </div>
@@ -81,17 +78,33 @@
                 <h4>Statystyki</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge">1342</span>Filmów
+
+                        <span class="badge"> 
+                            
+                        @foreach($lFilmows as $lFilmow)
+                        {{$lFilmow-> id-5}}     
+                        @endforeach
+                        
+                    
+                        </span>Filmów
+              
+                        
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">18</span>Kategorii
+                        <span class="badge">
+                            @foreach($lCategorys as $lCategory)
+                            {{$lCategory-> id}}     
+                            @endforeach
+                        </span>Kategorii
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">7800</span>Użytkowników
+                        <span class="badge">
+                            @foreach($lUsers as $lUsers)
+                            {{$lUsers-> id}}     
+                            @endforeach
+                        </span>Użytkowników
                     </li>
-                    <li class="list-group-item">
-                        <span class="badge">832</span>Komentarzy
-                    </li>
+                    
                 </ul>                            
             </div>
         </div>
