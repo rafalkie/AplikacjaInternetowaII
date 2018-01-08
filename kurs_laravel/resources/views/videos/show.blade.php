@@ -25,7 +25,7 @@
                  </div>
 
                 <h4>Pełny opis</h4>
-                <p>{{ $video->discription}}</p>
+                <p>{{ $video->description}}</p>
                 <span class="upper-label">Dodał</span>
                 <span class="video-author">{{ $video->user->name }}</span>
                 <div class="edit-button">

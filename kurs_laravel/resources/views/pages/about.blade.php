@@ -1,12 +1,15 @@
 
 @extends('master')
 @section('content')
+  <div class="card">
 <div class="row">
+	<div class="single-video-content ">
+  <div class="col-xs-12 col-md-12 col-lg-12 ">
 	<h2>Redakcja</h2>
-	<p> Ludzie tworzący redakcję naszego serwisu to miłośnicy filmów, którzy dzięki pracy przy tworzeniu Free-Films mają okazję zajmować się tym, co lubią najbardziej. Nasz zespół skupia specjalistów z różnych dziedzin: polonistów, dziennikarzy, informatyków, grafików i specjalistów od marketingu. Dzięki temu do każdego z zadań podchodzimy w sposób świeży i oryginalny.
+	<p> Ludzie tworzący redakcję naszego serwisu to miłośnicy filmów, którzy dzięki pracy przy tworzeniu Free-Films mają okazję zajmować się tym, co lubią najbardziej. Nasz zespół skupia specjalistów z różnych dziedzin: polonistów, dziennikarzy, informatyków, grafików i specjalistów od marketingu. Dzięki temu do każdego z zadań podchodzimy w sposób świeży i oryginalny.Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej prezentujemy niektórych z nich.</p>
+	<br><br>
+</div>
 
-Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej prezentujemy niektórych z nich.</p>
-<br>
    <div class="col-xs-12 col-md-6 col-lg-6 single-video">
    	<img src="{{ URL::asset('/img/a1.jpg')}}" alt="a1" class="embed-responsive-item">
  <br><br>  	
@@ -26,7 +29,7 @@ Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej
 
    <div class="col-xs-12 col-md-6 col-lg-6 single-video">
    		<img src="{{ URL::asset('/img/a1.jpg')}}" alt="a1" class="embed-responsive-item">
-
+ <br><br> 
 <p>	Imię: Jakub</p>
 <p>czym zajmuję się w portalu: Zastępca redaktora naczelnego</p>
 <p>adres e-mail: Jakub@freefilms.com</p>
@@ -38,6 +41,6 @@ Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej
 <p>ile czasu spędzam dziennie w internecie:8 godz.</p>
 <p>ak często chodzę do kina: 3 x tydz.</p>
 </div>
-
 </div>
+</div></div>
 @stop

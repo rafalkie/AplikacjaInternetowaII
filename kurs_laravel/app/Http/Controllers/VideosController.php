@@ -47,7 +47,7 @@ class VideosController extends Controller
          
     	
     	$video= Video::findOrFail($id);
-    	return view('videos.show',compact('video','d','lFilmows','lCategorys','lUsers','Categorys'));
+    	return view('videos.show',compact('video','lFilmows','lCategorys','lUsers','Categorys'));
     }
 
     ///wyswietla formularz dodawania filmu

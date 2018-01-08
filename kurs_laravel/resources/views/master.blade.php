@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Artykuły</title>
+    <title>Free-Films</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -87,8 +87,8 @@
 
     <!-- Footer -->
     <footer class="site-footer panel-success ">
-        <div class="container">
-            <p>&copy; Free-Films-2018 ; Autorzy: Rafał Kieroński i Jakub Kuśnierz</p>
+        <div class="container" style="text-align:center; ">
+            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 </p>
      
         </div>
     </footer>
