@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/', 'VideosController@index');
 
 Route::get('/contact','PagesController@contact');
+Route::get('/about','PagesController@about');
 
 
 

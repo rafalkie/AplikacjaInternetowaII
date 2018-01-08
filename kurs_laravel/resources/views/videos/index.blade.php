@@ -1,39 +1,41 @@
 @extends('master')
 @section('content')
 
- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img src="img/1.jpg" alt="Los Angeles">
-                </div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-                <div class="item">
-                  <img src="img/2.jpg" alt="Chicago">
-                </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="{{ URL::asset('/img/1.jpg')}}" alt="Los Angeles">
+    </div>
 
-                <div class="item">
-                  <img src="img/3.jpg" alt="New York">
-                </div>
-              </div>
+    <div class="item">
+      <img src="{{ URL::asset('/img/2.jpg')}}" alt="Chicago">
+    </div>
 
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+    <div class="item">
+      <img src="{{ URL::asset('/img/3.jpg')}}" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
 
 
 <div class="videos-header card">
@@ -62,7 +64,7 @@
 	                <a href="{{ url('videos',$video->id) }}">
 	                    <h4>{{ $video->title}}</h4>
 	                </a>
-	                <p>{{str_limit($video->description, 20)}}</p>
+	                <p>{{str_limit($video->description, 60)}}</p>
 	                <span class="upper-label">Dodał</span>
 	                <span class="video-author">{{ $video->user->name }}</span>
 	            </div>

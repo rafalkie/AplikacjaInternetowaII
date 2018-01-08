@@ -11,6 +11,7 @@ use App\Http\Requests\CreateVideoRequest;
 use Auth;
 use Session;
 use App\Category;
+use App\User;
 
 class VideosController extends Controller
 {
@@ -37,12 +38,16 @@ class VideosController extends Controller
     public function show($id){
 
         ///wyciaganie liczby filmów
-        // $lFilmow=DB::table('videos')->limit(1)->latest()->pluck('id');
+        // $lFilmow=DB::table('category_video')->limit(1)->latest()->get();
          $lFilmows=Video::latest()->limit(1)->get();
+         $lCategorys=DB::table('categories')->limit(1) ->orderBy('id', 'desc')->get();
+         $Categorys=DB::table('categories')->get();
+         $lUsers=User::latest()->limit(1)->get();
+         
          
     	
     	$video= Video::findOrFail($id);
-    	return view('videos.show',compact('video','d','lFilmows'));
+    	return view('videos.show',compact('video','d','lFilmows','lCategorys','lUsers','Categorys'));
     }
 
     ///wyswietla formularz dodawania filmu

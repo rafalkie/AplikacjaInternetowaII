@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
 
@@ -39,9 +39,13 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="/">
-                    Free - Films
+                
+                <a class="navbar-brand" href="#">
+                <span><img src="{{ URL::asset('/img/logo.png')}}" width="30" height="30"/></span>
+                Free-Films
                 </a>
+   
+             
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -81,7 +85,7 @@
     
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer panel-success ">
         <div class="container">
             <p>&copy; Free-Films-2018 ; Autorzy: Rafał Kieroński i Jakub Kuśnierz</p>
      
