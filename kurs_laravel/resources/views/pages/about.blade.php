@@ -26,7 +26,7 @@ Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej
 
    <div class="col-xs-12 col-md-6 col-lg-6 single-video">
    		<img src="{{ URL::asset('/img/a1.jpg')}}" alt="a1" class="embed-responsive-item">
-<br><br>
+
 <p>	Imię: Jakub</p>
 <p>czym zajmuję się w portalu: Zastępca redaktora naczelnego</p>
 <p>adres e-mail: Jakub@freefilms.com</p>

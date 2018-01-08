@@ -9,7 +9,7 @@
     <div class="form-area">  
         <form role="form">
         <br style="clear:both">
-                    <h3 style="margin-bottom: 25px; text-align: center;">Formularz Kontaktowy</h3>
+                    <h1 style="margin-bottom: 37px; text-align: center;">Formularz Kontaktowy</h1>
     				<div class="form-group">
 						<input type="text" class="form-control" id="name" name="name" placeholder="Imię Nazwisko" required>
 					</div>
