@@ -58,9 +58,15 @@
                         <ul class="dropdown-menu">
                                         
                          
-                            <li><a href="1"> 1</a></li> 
-                            <li><a href="2"> 2</a></li>  
-                            <li><a href="3"> 3</a></li>    
+                            <li><a href="">Dramat</a></li> 
+                            <li><a href="">Komedia</a></li>  
+                            <li><a href="">Sensacyjny</a></li>  
+                            <li><a href="">Kryminał</a></li> 
+                            <li><a href="">Akcja</a></li>  
+                            <li><a href="">Horror</a></li>   
+                            <li><a href="">Przygodowy</a></li> 
+                            <li><a href="">Romantyczny</a></li>  
+                         
                           
                         </ul>
                       </li>
