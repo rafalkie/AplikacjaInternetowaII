@@ -52,7 +52,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="/videos">Start</a></li>
-                    <li><a href="/videos">Filmy</a></li>
+                    <li><a href="/category">Kategorie</a></li>
                     <li><a href="/about">O nas</a></li>
                     <li><a href="/contact">Kontakt</a></li>
                     
@@ -77,7 +77,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Wyloguj
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
