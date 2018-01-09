@@ -57,15 +57,15 @@
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                                         
-                         
-                            <li><a href="">Dramat</a></li> 
-                            <li><a href="">Komedia</a></li>  
-                            <li><a href="">Sensacyjny</a></li>  
-                            <li><a href="">Kryminał</a></li> 
-                            <li><a href="">Akcja</a></li>  
-                            <li><a href="">Horror</a></li>   
-                            <li><a href="">Przygodowy</a></li> 
-                            <li><a href="">Romantyczny</a></li>  
+                     
+                            <li><a href="/category/1">Dramat</a></li> 
+                            <li><a href="/category/2">Komedia</a></li>  
+                            <li><a href="/category/3">Sensacyjny</a></li>  
+                            <li><a href="/category/4">Kryminał</a></li> 
+                            <li><a href="/category/5">Akcja</a></li>  
+                            <li><a href="/category/6">Horror</a></li>   
+                            <li><a href="/category/7">Przygodowy</a></li> 
+                            <li><a href="/category/8">Romantyczny</a></li>  
                          
                           
                         </ul>

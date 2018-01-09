@@ -16,23 +16,25 @@ Route::get('/', function () {
 });
 Route::get('/', 'VideosController@index');
 
+
 Route::get('/contact','PagesController@contact');
 Route::get('/about','PagesController@about');
-Route::get('/category','CategoryController@about');
+Route::get('/category/{id}','CategoryController@about');
 
 
-
+// Route::post('/videos','VideosController@store');
+// 	Route::get('/videos','VideosController@index');
+// 	Route::get('/videos/create','VideosController@create');
+	
 
 
 Route::group(['middleware' =>['web']],function(){
 
 
-	// Route::post('/videos','VideosController@store');
-	// Route::get('/videos','VideosController@index');
-	// Route::get('/videos/create','VideosController@create');
-	// Route::get('/videos/{id}','VideosController@show');
+	
 
 	Route::resource('videos','VideosController');
+
 
 });
 Auth::routes();

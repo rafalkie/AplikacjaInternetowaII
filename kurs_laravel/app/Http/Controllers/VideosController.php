@@ -13,6 +13,8 @@ use Session;
 use App\Category;
 use App\User;
 
+
+
 class VideosController extends Controller
 {
 
@@ -33,6 +35,15 @@ class VideosController extends Controller
     	return view('videos.index')->with('videos',$videos);
     }
 
+    //pobieramy listę filmów po kategori
+
+    public function indexK(){
+
+
+      $videos= Video::latest()->get();
+
+      return view('videos.index')->with('videos',$videos);
+    }
 
     ///metoda która wyciąga jeden film
     public function show($id){
