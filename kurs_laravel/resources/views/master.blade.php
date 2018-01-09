@@ -62,8 +62,31 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                         <li><a href="/videos/create">Dodaj Film</a></li>
-                        <li><a href="/login">Zaloguj</a></li>
-                        <li><a href="register">Rejestracja</a></li>
+                         <!-- Authentication Links -->
+                        @guest
+                            <li><a href="{{ route('login') }}">Zaloguj</a></li>
+                            <li><a href="{{ route('register') }}">Zarejestruj</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
 
                 </ul>
             </div>
