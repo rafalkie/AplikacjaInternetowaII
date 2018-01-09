@@ -52,7 +52,19 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="/videos">Start</a></li>
-                    <li><a href="/category">Kategorie</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/">Kategorie
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                        
+                         
+                            <li><a href="1"> 1</a></li> 
+                            <li><a href="2"> 2</a></li>  
+                            <li><a href="3"> 3</a></li>    
+                          
+                        </ul>
+                      </li>
+
                     <li><a href="/about">O nas</a></li>
                     <li><a href="/contact">Kontakt</a></li>
                     
