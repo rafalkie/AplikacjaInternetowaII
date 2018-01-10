@@ -4,9 +4,17 @@
 
 
 
-	<div class="container ">
-        <br><br><br><br>
+	<div class="card2">
+         <div class="carousel-inner">
+     <img src="{{ URL::asset('/img/banner.png')}}" alt="Los Angeles" width="100%">
+  </div>
+<div class="row">
+    <div class="single-video-content ">
+  <div class="col-xs-12 col-md-12 col-lg-12 ">
+   
+       
   <div class="row">
+    <h2 style="text-align:center;margin-bottom:30px;">Zapraszamy do kontaktu </h2>
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Formularz Kontaktowy</div>
@@ -37,6 +45,8 @@
    </div>
 </div>
 </div>
-
+ </div>
+</div>
+</div>
 
 @stop
