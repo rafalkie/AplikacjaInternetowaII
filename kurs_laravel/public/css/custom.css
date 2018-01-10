@@ -13,11 +13,11 @@ html, body {
 body {
 	padding-top: 23px;
 	color: #212121;
-	background-color: #e5dfe8;
+	background-color: #c8c7c9;
 }
 
 .site-content {
-	margin-top: 29px;
+	margin-top: 32px;
 	margin-bottom: 50px;	
 }
 
@@ -289,4 +289,10 @@ a, .btn-link {
 .btn.btn-primary{
 	background-color: black !important;
 	color:white !important;
+}
+.pasek_g{
+	height:2px;
+	background-color:#ffc404;
+	margin:0;
+	padding: 0; 
 }

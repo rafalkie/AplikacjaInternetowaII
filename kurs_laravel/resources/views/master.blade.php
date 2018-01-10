@@ -28,7 +28,9 @@
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="pasek_g"></div>
         <div class="container">
+
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
