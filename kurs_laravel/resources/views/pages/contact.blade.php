@@ -6,7 +6,7 @@
 
 	<div class="card2">
          <div class="carousel-inner">
-     <img src="{{ URL::asset('/img/banner.png')}}" alt="Los Angeles" width="100%">
+     <img src="{{ URL::asset('/img/kontakt.png')}}" alt="Los Angeles" width="100%">
   </div>
 <div class="row">
     <div class="single-video-content ">
@@ -39,8 +39,11 @@
             
         <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Zatwierdź</button>
         </form>
+
     </div>
+
 </div>
+<br> <br> <br>
 </div>
    </div>
 </div>

@@ -1,9 +1,7 @@
 @extends('master')
 @section('content')
 
-<div class="videos-header2 ">
-        <h2>{{ $video->title}}</h2>
-</div>
+
 
 
 <div class="row">
@@ -12,7 +10,9 @@
     <div class="col-xs-12 col-md-9 single-video-left">
 
         <div class="card">
-
+            <div class="videos-header2 ">
+                    <h2>{{ $video->title}}</h2>
+            </div>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{ $video->url}}" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -21,7 +21,7 @@
                 
                 <div class="categories">
                 @foreach($video->categories as $category)
-                  <a href=""> {{$category -> name}}&nbsp;  </a>     
+                  <a href="/videos/category/{{$category -> id}}"> {{$category -> name}}&nbsp;  </a>     
                 @endforeach
                  </div>
 

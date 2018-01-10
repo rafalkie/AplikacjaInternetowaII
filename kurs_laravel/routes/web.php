@@ -19,7 +19,7 @@ Route::get('/', 'VideosController@index');
 
 Route::get('/contact','PagesController@contact');
 Route::get('/about','PagesController@about');
-Route::get('/category/{id}','CategoryController@about');
+Route::get('videos/category/{id}','CategoryController@about');
 
 
 // Route::post('/videos','VideosController@store');

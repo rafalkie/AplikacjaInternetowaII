@@ -56,6 +56,7 @@
 	@foreach($videos as $video)
 
 	    <!-- Single video -->
+      
 	    <div class="col-xs-12 col-md-6 col-lg-4 single-video">
 	        <div class="card">
 	        
