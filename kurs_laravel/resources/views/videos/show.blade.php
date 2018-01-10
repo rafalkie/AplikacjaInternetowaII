@@ -61,15 +61,16 @@
             <div class="right-col-box categories-box">
                 <h4>Popularne kategorie</h4>
                 <ul class="list-group">
-         {{--               @foreach($Categorys as $Category)
+                       @foreach($Categorys as $Category)
                     
                     <li class="list-group-item">
                         <h5> {{$Category-> name}}   </h5>
-                          {{$ile=($Category->id)}}
-                            <span>{{$CategoryLs -> where('category_id', Auth::user()->category_id)->get()}}</span>
-                    </li>tu zle
+                         {{--  {{$ile=($Category->id)}} --}}
+                            
+                            <span>{{App\Category::find($Category->id)->videos->count()}}</span>
+                    </li>
                       
-                            @endforeach --}}
+                            @endforeach
                 </ul>
             </div>
         </div>
