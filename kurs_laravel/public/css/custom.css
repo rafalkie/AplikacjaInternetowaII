@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-	padding-top: 50px;
+	padding-top: 23px;
 	color: #212121;
 	background-color: #E9EAED;
 }
@@ -42,32 +42,49 @@ a, .btn-link {
 
 /* Top navbar */
 .navbar-default {
-	background-color: #3F51B5;
+	background-color: #121313;
 	border: none;
-	box-shadow: 0px 0px 7px 0px #777;
-	border-radius: 0;
+	box-shadow: 0px 0px 22px 0px #040404;
+	border-radius: 4px;
+
 }
+
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
 	color: #FFFFFF;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-nav > li > a:hover {
-	color: #FFFFFF;
+
 }
 
+.navbar-default .navbar-nav > li > a:hover {
+	color: #FFFFFF;
+	background-color: white;
+	color: black;
+}
+
+
 /* Wspolne style */
-.videos-header {
-	padding-top: 30px;
-	padding-bottom: 30px;
+
+.videos-header  {
+	  background: rgba(0, 0, 0, 1);
+	margin-top:4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	text-align:center;
+	color:white;
+	border-bottom:3px solid #ffc404;
+
+	
 }
 
 .videos-header h2 {
 	padding: 0;
 	margin: 0;
+	font-weight:bold;
+	font-size:35px;
+
 }
 
 /* Lista video */
@@ -254,4 +271,14 @@ a, .btn-link {
 
 .static-page-content  h3 {
 	margin: 0;
+}
+
+
+.nav-link.active{
+	background-color: #ffc404;
+	color:black !important;;
+}
+
+.navbar-brand{
+	margin-top:-15px;
 }

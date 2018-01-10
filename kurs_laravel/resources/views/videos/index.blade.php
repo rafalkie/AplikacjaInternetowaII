@@ -10,6 +10,8 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
+
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
@@ -38,8 +40,8 @@
 
 
 
-<div class="videos-header card">
-    <h2>Najnowsze filmy</h2>
+<div class="videos-header ">
+    <h2>Najnowsze Filmy</h2>
 </div>
 
 @if (Session::has('video_created'))

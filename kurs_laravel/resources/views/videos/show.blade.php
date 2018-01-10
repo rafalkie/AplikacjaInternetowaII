@@ -61,11 +61,12 @@
                 <h4>Popularne kategorie</h4>
                 <ul class="list-group">
                        @foreach($Categorys as $Category)
-                         
+                    
                     <li class="list-group-item">
                         <h5> {{$Category-> name}}   </h5>
-                 
-                    </li>
+                          {{$ile=($Category->id)}}
+                            <span>{{$CategoryLs -> where('category_id', Auth::user()->category_id)->get()}}</span>
+                    </li>{{-- tu zle --}}
                       
                             @endforeach
                 </ul>

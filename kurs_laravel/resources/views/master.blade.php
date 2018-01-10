@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top ">
+    <nav class="navbar navbar-default navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,9 +40,9 @@
 
                 <!-- Branding Image -->
                 
-                <a class="navbar-brand" href="#">
-                <span><img src="{{ URL::asset('/img/logo.png')}}" width="30" height="30"/></span>
-                Free-Films
+                <a class="navbar-brand" href="/">
+                <span><img src="{{ URL::asset('/img/logo.png')}}" width="50" height="50" /></span>
+                Free-films
                 </a>
    
              
@@ -51,9 +51,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/videos">Start</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="/">Kategorie
+                        <li><a href="/videos" >Start</a></li>
+                         <li class="dropdown">
+                        <a  class="dropdown-toggle  nav-link" data-toggle="dropdown" href="/">Kategorie
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                                         
@@ -79,7 +79,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="/videos/create">Dodaj Film</a></li>
+                        <li><a class="nav-link active" href="/videos/create">Dodaj Film</a></li>
                          <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Zaloguj</a></li>
