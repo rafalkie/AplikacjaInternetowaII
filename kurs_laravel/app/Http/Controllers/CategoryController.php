@@ -18,7 +18,8 @@ class CategoryController extends Controller
    public function about($id){
 	$videos= Video::latest()->get();
 	$link= $id;
-    		return view('category.category',compact('link','videos'));
+	   $categories = Category::pluck('name','id');
+    		return view('category.category',compact('link','videos','categories'));
     }
  public function show($id){
 

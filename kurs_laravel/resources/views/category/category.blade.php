@@ -7,7 +7,13 @@
 
 	 
 <div class="row">
+	<br><br>
+<div class="videos-header ">
+    <h2>Filmy gatunek - 
+   {{App\Category::find($link)->name}}
+                  
 
+</div>
 	@foreach(App\Category::find($link)->videos as $video)
 
 	    <!-- Single video -->
