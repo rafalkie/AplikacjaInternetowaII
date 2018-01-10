@@ -5,11 +5,16 @@
 
 
 	<div class="container ">
-    <div class="col-md-5 col-md-offset-4">
-    <div class="form-area">  
-        <form role="form">
-        <br style="clear:both">
-                    <h1 style="margin-bottom: 37px; text-align: center;">Formularz Kontaktowy</h1>
+        <br><br><br><br>
+  <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Formularz Kontaktowy</div>
+
+                <div class="panel-body">  
+                <form role="form">
+                     <br style="clear:both">
+                   
     				<div class="form-group">
 						<input type="text" class="form-control" id="name" name="name" placeholder="Imię Nazwisko" required>
 					</div>
@@ -29,7 +34,9 @@
     </div>
 </div>
 </div>
-
+   </div>
+</div>
+</div>
 
 
 @stop
