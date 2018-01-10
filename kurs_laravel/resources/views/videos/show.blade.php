@@ -1,9 +1,10 @@
 @extends('master')
 @section('content')
 
-<div class="col-xs-12 videos-header card">
-    <h2>{{ $video->title}}</h2>
+<div class="videos-header2 ">
+        <h2>{{ $video->title}}</h2>
 </div>
+
 
 <div class="row">
 
@@ -60,15 +61,15 @@
             <div class="right-col-box categories-box">
                 <h4>Popularne kategorie</h4>
                 <ul class="list-group">
-                       @foreach($Categorys as $Category)
+         {{--               @foreach($Categorys as $Category)
                     
                     <li class="list-group-item">
                         <h5> {{$Category-> name}}   </h5>
                           {{$ile=($Category->id)}}
                             <span>{{$CategoryLs -> where('category_id', Auth::user()->category_id)->get()}}</span>
-                    </li>{{-- tu zle --}}
+                    </li>tu zle
                       
-                            @endforeach
+                            @endforeach --}}
                 </ul>
             </div>
         </div>

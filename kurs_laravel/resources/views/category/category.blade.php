@@ -5,9 +5,13 @@
 
 
 
-	 
+	
+	 <div class="carousel-inner">
+     <img src="{{ URL::asset('/img/banner.jpg')}}" alt="Los Angeles" width="100%">
+  </div>
 <div class="row">
-	<br><br>
+	
+
 <div class="videos-header ">
     <h2>Filmy gatunek - 
    {{App\Category::find($link)->name}}
