@@ -45,7 +45,7 @@
                 
                 <a class="navbar-brand" href="/">
                 <span><img src="{{ URL::asset('/img/logo.png')}}" width="50" height="50" /></span>
-                Free-films
+                Free-Films
                 </a>
    
              
@@ -133,7 +133,7 @@
     <footer class="site-footer panel-success ">
         <div class="container" style="text-align:center; ">
             <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 ; Autorzy Rafał Kieroński , Jakub Kuśnierz </p>
-              
+
      
         </div>
     </footer>

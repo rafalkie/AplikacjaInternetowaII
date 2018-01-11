@@ -6,9 +6,10 @@
 	<div class="single-video-content ">
   <div class="col-xs-12 col-md-12 col-lg-12 ">
 	<h1 style="text-align: center;">Redakcja</h1>
-  <br>
-	<p> Ludzie tworzący redakcję naszego serwisu to miłośnicy filmów, którzy dzięki pracy przy tworzeniu Free-Films mają okazję zajmować się tym, co lubią najbardziej. Nasz zespół skupia specjalistów z różnych dziedzin: polonistów, dziennikarzy, informatyków, grafików i specjalistów od marketingu. Dzięki temu do każdego z zadań podchodzimy w sposób świeży i oryginalny.Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej prezentujemy niektórych z nich.</p>
-	<br><br>
+ 
+  <hr>
+	<p style="font-size:18px;text-align: center;"> Ludzie tworzący redakcję naszego serwisu to miłośnicy filmów, którzy dzięki pracy przy tworzeniu Free-Films mają okazję zajmować się tym, co lubią najbardziej. Nasz zespół skupia specjalistów z różnych dziedzin: polonistów, dziennikarzy, informatyków, grafików i specjalistów od marketingu. Dzięki temu do każdego z zadań podchodzimy w sposób świeży i oryginalny.Na naszą wysoką pozycję na rynku ciężko pracuje cały sztab ludzi. Poniżej prezentujemy niektórych z nich.</p>
+	<br><br><br>
 </div>
 
  <div class="col-xs-12 col-md-8 col-lg-6 single-video text-center">
@@ -44,5 +45,11 @@
 <b>Jak często chodzę do kina:</b><p> 3 x tydz.</p>
 </div>
 </div>
-</div></div>
+
+
+</div>
+<hr>
+<h3 style="color:#ca5656;text-align: center;">Poszukiwany: Redaktor</h3>
+  <p style="text-align: center;padding-bottom:25px;">Osoby zainteresowane współpracą z nami w charakterze redaktora prosimy o Kontakt<p>
+</div>
 @stop
