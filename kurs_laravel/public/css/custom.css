@@ -13,7 +13,7 @@ html, body {
 body {
 	padding-top: 23px;
 	color: #212121;
-	background-color: #c8c7c9;
+	background-color: #efeeee;
 }
 
 .site-content {
@@ -123,14 +123,15 @@ a, .btn-link {
   	box-sizing: border-box;
   	background-clip: padding-box;
   	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  	background-color: white;
+  	background-color: #faf7f7;
 }
 .card-show {
 	margin-top: 10px;
   	box-sizing: border-box;
   	background-clip: padding-box;
   	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  	background-color: white;
+  	background-color: #faf7f7;
+  	min-height: 1054px;
 }
 .card2 {
 	margin-top: 0px;
@@ -146,7 +147,7 @@ a, .btn-link {
 
 
 .card-content {
-	padding: 16px;
+	padding: 15px;
 }
 
 .card-content a,

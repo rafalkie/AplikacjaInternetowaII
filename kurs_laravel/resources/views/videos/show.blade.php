@@ -8,7 +8,7 @@
     <!-- left col. -->
     <div class="col-xs-12 col-md-9 single-video-left">
 
-        <div class="card">
+        <div class="card-show">
             <div class="videos-header2 ">
                     <h2>{{ $video->title}}</h2>
             </div>
@@ -25,13 +25,14 @@
                  </div>
 
                 <h4>Pełny opis</h4>
-                <p style="font-size:18px;">{{ $video->description}}</p>
+                <p style="font-size:18px;color:#3c3c3c;">{{ $video->description}}</p>
                 <span class="upper-label">Dodał</span>
                 <span class="video-author">{{ $video->user->name }}</span>
-                <div class="edit-button">
-                    <a href="{{action('VideosController@edit',$video->id)}}" class="btn btn-primary btn-lg">
+                <div class="edit-button text-right">
+                    <a href="{{action('VideosController@edit',$video->id)}}" class="btn btn-primary btn-lg ">
                         Edytuj Video
                     </a>
+                    <br><hr>
                 </div>
             </div>
             
