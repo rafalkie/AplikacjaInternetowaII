@@ -57,20 +57,24 @@
         </div>
 
         <!-- pojedynczy box -->
-        <div class="card">
+        <div class="card text-center">
             <div class="right-col-box categories-box">
                 <h4>Popularne kategorie</h4>
+                 <h6>(Liczba filmów na stronie)</h6>
                 <ul class="list-group">
                        @foreach($Categorys as $Category)
                     
-                    <li class="list-group-item">
-                        <h5> {{$Category-> name}}   </h5>
+                    <li class="list-group-item ">
+                        <h5> {{$Category-> name}}:  </h5>
+                        <h6>{{App\Category::find($Category->id)->videos->count()}} filmy   </h6>
                          {{--  {{$ile=($Category->id)}} --}}
                             
-                            <span>{{App\Category::find($Category->id)->videos->count()}}</span>
+                           
                     </li>
                       
                             @endforeach
+
+
                 </ul>
             </div>
         </div>
@@ -78,7 +82,7 @@
         <!-- pojedynczy box -->
         <div class="card">
             <div class="right-col-box">
-                <h4>Statystyki</h4>
+                <h4 class="text-center">Statystyki</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
 
