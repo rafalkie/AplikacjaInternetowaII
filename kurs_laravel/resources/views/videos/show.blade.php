@@ -1,9 +1,8 @@
 @extends('master')
 @section('content')
 
-<div class="col-xs-12 videos-header card">
-    <h2>{{ $video->title}}</h2>
-</div>
+
+
 
 <div class="row">
 
@@ -11,7 +10,9 @@
     <div class="col-xs-12 col-md-9 single-video-left">
 
         <div class="card">
-
+            <div class="videos-header2 ">
+                    <h2>{{ $video->title}}</h2>
+            </div>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{ $video->url}}" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -20,12 +21,12 @@
                 
                 <div class="categories">
                 @foreach($video->categories as $category)
-                  <a href=""> {{$category -> name}}&nbsp;  </a>     
+                  <a href="/videos/category/{{$category -> id}}"> {{$category -> name}}&nbsp;  </a>     
                 @endforeach
                  </div>
 
                 <h4>Pełny opis</h4>
-                <p>{{ $video->description}}</p>
+                <p style="font-size:18px;">{{ $video->description}}</p>
                 <span class="upper-label">Dodał</span>
                 <span class="video-author">{{ $video->user->name }}</span>
                 <div class="edit-button">
@@ -61,10 +62,12 @@
                 <h4>Popularne kategorie</h4>
                 <ul class="list-group">
                        @foreach($Categorys as $Category)
-                         
+                    
                     <li class="list-group-item">
                         <h5> {{$Category-> name}}   </h5>
-                 
+                         {{--  {{$ile=($Category->id)}} --}}
+                            
+                            <span>{{App\Category::find($Category->id)->videos->count()}}</span>
                     </li>
                       
                             @endforeach

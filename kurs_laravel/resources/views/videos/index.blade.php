@@ -10,6 +10,8 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
+
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
@@ -38,8 +40,8 @@
 
 
 
-<div class="videos-header card">
-    <h2>Najnowsze filmy</h2>
+<div class="videos-header ">
+    <h2>Najnowsze Filmy</h2>
 </div>
 
 @if (Session::has('video_created'))
@@ -54,6 +56,7 @@
 	@foreach($videos as $video)
 
 	    <!-- Single video -->
+      
 	    <div class="col-xs-12 col-md-6 col-lg-4 single-video">
 	        <div class="card">
 	        
@@ -64,7 +67,7 @@
 	                <a href="{{ url('videos',$video->id) }}">
 	                    <h4>{{ $video->title}}</h4>
 	                </a>
-	                <p>{{str_limit($video->description, 60)}}</p>
+	                <p>{{str_limit($video->description, 40)}}</p>
 	                <span class="upper-label">Dodał</span>
 	                <span class="video-author">{{ $video->user->name }}</span>
 	            </div>

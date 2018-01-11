@@ -15,4 +15,6 @@ protected $fillable =['name'];
     {
     	return $this->belongsToMany('App\Video')->withTimestamps();
     }
+
+   
 }

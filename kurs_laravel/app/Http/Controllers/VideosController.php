@@ -13,6 +13,8 @@ use Session;
 use App\Category;
 use App\User;
 
+
+
 class VideosController extends Controller
 {
 
@@ -33,21 +35,31 @@ class VideosController extends Controller
     	return view('videos.index')->with('videos',$videos);
     }
 
+    //pobieramy listę filmów po kategori
+
+    public function indexK(){
+
+
+      $videos= Video::latest()->get();
+
+      return view('videos.index')->with('videos',$videos);
+    }
 
     ///metoda która wyciąga jeden film
     public function show($id){
-
+       
         ///wyciaganie liczby filmów
         // $lFilmow=DB::table('category_video')->limit(1)->latest()->get();
          $lFilmows=Video::latest()->limit(1)->get();
          $lCategorys=DB::table('categories')->limit(1) ->orderBy('id', 'desc')->get();
          $Categorys=DB::table('categories')->get();
+         $CategoryLs=DB::table('category_video','categories')->count();
          $lUsers=User::latest()->limit(1)->get();
-         
+         $lGatuneks=DB::table('category_video')->where('category_id','$id')->orderBy('category_id', 'asc')->get();
          
     	
     	$video= Video::findOrFail($id);
-    	return view('videos.show',compact('video','lFilmows','lCategorys','lUsers','Categorys'));
+    	return view('videos.show',compact('video','lFilmows','lCategorys','lUsers','Categorys','CategoryLs','$ile'));
     }
 
     ///wyswietla formularz dodawania filmu

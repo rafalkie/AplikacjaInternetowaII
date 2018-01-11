@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
 <div class="container">
+<br><br><br><br><br><br><br><br><br>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -50,7 +51,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" >
                                     Zaloguj
                                 </button>
 
@@ -60,9 +61,13 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
+
             </div>
+             <br><br><br><br>
         </div>
     </div>
 </div>
 @endsection
+  

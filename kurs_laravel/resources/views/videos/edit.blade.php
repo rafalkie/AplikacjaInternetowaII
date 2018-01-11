@@ -2,9 +2,11 @@
 @section('content')
 
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <div class="card">
-            <div class="panel-body">
+    <br><br><br>
+ <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Edytuj Video</div>
+                <br>
             <!-- Formularz -->
 
            			 @include('videos.form_errors')

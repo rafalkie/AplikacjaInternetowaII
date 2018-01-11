@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Free-Films</title>
+    <link rel="Shortcut icon" href="{{ URL::asset('/img/logo2.png')}}"" />
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -26,8 +27,10 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top ">
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="pasek_g"></div>
         <div class="container">
+
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -40,8 +43,8 @@
 
                 <!-- Branding Image -->
                 
-                <a class="navbar-brand" href="#">
-                <span><img src="{{ URL::asset('/img/logo.png')}}" width="30" height="30"/></span>
+                <a class="navbar-brand" href="/">
+                <span><img src="{{ URL::asset('/img/logo.png')}}" width="50" height="50" /></span>
                 Free-Films
                 </a>
    
@@ -51,8 +54,26 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/videos">Start</a></li>
-                    <li><a href="/videos">Filmy</a></li>
+                        <li><a href="/videos" >Start</a></li>
+                         <li class="dropdown">
+                        <a  class="dropdown-toggle  nav-link" data-toggle="dropdown" href="/">Kategorie
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                        
+                     
+                            <li><a href="/videos/category/1">Dramat</a></li> 
+                            <li><a href="/videos/category/2">Komedia</a></li>  
+                            <li><a href="/videos/category/3">Sensacyjny</a></li>  
+                            <li><a href="/videos/category/4">Kryminał</a></li> 
+                            <li><a href="/videos/category/5">Akcja</a></li>  
+                            <li><a href="/videos/category/6">Horror</a></li>   
+                            <li><a href="/videos/category/7">Przygodowy</a></li> 
+                            <li><a href="/videos/category/8">Romantyczny</a></li>  
+                         
+                          
+                        </ul>
+                      </li>
+
                     <li><a href="/about">O nas</a></li>
                     <li><a href="/contact">Kontakt</a></li>
                     
@@ -61,9 +82,32 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="/videos/create">Dodaj Film</a></li>
-                        <li><a href="/login">Zaloguj</a></li>
-                        <li><a href="register">Rejestracja</a></li>
+                        <li><a class="nav-link active" href="/videos/create">Dodaj Film</a></li>
+                         <!-- Authentication Links -->
+                        @guest
+                            <li><a href="{{ route('login') }}">Zaloguj</a></li>
+                            <li><a href="{{ route('register') }}">Zarejestruj</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Wyloguj
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
 
                 </ul>
             </div>
@@ -88,7 +132,8 @@
     <!-- Footer -->
     <footer class="site-footer panel-success ">
         <div class="container" style="text-align:center; ">
-            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 </p>
+            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 ; Autorzy Rafał Kieroński , Jakub Kuśnierz </p>
+
      
         </div>
     </footer>

@@ -1,10 +1,13 @@
 @extends('master')
 @section('content')
 
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <div class="card">
-            <div class="panel-body">
+<br>
+    <div class="row">
+        
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dodaj Video</div>
+                <hr>
             <!-- Formularz -->
 
                     @include('videos.form_errors')
