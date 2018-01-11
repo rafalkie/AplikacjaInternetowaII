@@ -132,7 +132,8 @@
     <!-- Footer -->
     <footer class="site-footer panel-success ">
         <div class="container" style="text-align:center; ">
-            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 </p>
+            <p>&copy; Wszelkie prawa zastrzeżone- Free-Films-2018 ; Autorzy Rafał Kieroński , Jakub Kuśnierz </p>
+              
      
         </div>
     </footer>

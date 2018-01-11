@@ -332,3 +332,6 @@ a, .btn-link {
 .row{
 	min-height:240px; 
 }
+.img-circle{
+	text-align:center;
+}
