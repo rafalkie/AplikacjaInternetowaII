@@ -2,8 +2,7 @@
 @section('content')
 
 
-
-
+{{-- <div class="card-show"> --}}
 <div class="row">
 
     <!-- left col. -->
@@ -65,8 +64,12 @@
                        @foreach($Categorys as $Category)
                     
                     <li class="list-group-item ">
-                        <h5> {{$Category-> name}}:  </h5>
-                        <h6>{{App\Category::find($Category->id)->videos->count()}} filmy   </h6>
+                      
+
+
+                  <a href="/videos/category/{{$Category-> id}}"> {{$Category -> name}}&nbsp;  </a>     
+              
+                        <h6>({{App\Category::find($Category->id)->videos->count()}} filmy)  </h6>
                          {{--  {{$ile=($Category->id)}} --}}
                             
                            
@@ -117,6 +120,6 @@
         </div>
 
     </div>
-
 </div>
+{{-- </div> --}}
 @stop
